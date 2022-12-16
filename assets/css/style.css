@@ -1,2 +1,66 @@
 /* GOOGLE FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+/* VARIABLES CSS */
+:root {
+    /* Colors */
+    --body-color: hsl(175, 100%, 99%);
+    --text-color: hsl(175, 8%, 50%);
+    --gradient-color: linear-gradient(180deg,
+                  hsl(178, 35%, 45%),
+                  hsl(178, 55%, 28%));
+    --white-color: #fff;
+
+    /* Font and typography */
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: "Poppins", sans-serif;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: .938rem;
+    --smaller-font-size: .75rem;
+}
+
+/* BASE  */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* CARD */
+.container {
+    height: 100vh;
+    margin-inline: 1.5rem;
+    display: grid;
+    place-items: center;
+}
+
+.card {
+    position: relative;
+    width: 290px;
+
+}
+
+/* CARD INFO  */
+
+/* Card info animation */
