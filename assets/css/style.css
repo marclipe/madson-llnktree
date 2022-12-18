@@ -5,12 +5,17 @@
 /* VARIABLES CSS */
 :root {
     /* Colors */
-    --body-color: hsl(175, 100%, 99%);
-    --text-color: hsl(175, 8%, 50%);
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: hsl(175, 55%, 40%);
+    --first-color-light: hsl(175, 30%, 48%);
+    --first-color-lighten: hsl(175, 40%, 62%);
     --gradient-color: linear-gradient(180deg,
-                  hsl(178, 35%, 45%),
-                  hsl(178, 55%, 28%));
+                    hsl(178, 35%, 45%),
+                    hsl(178, 55%, 28%));
+    --title-color: hsl(175, 40%, 16%);
+    --text-color: hsl(175, 8%, 50%);
     --white-color: #fff;
+    --body-color: hsl(175, 100%, 99%);
 
     /* Font and typography */
     /*.5rem = 8px | 1rem = 16px ...*/
@@ -58,9 +63,50 @@ img {
 .card {
     position: relative;
     width: 290px;
+    background: var(--gradient-color);
+    border-radius: 1rem 1rem 11rem 11rem;
+    padding: 2.5rem 1.5rem 3.5rem;
+    text-align: center;
+    box-shadow: 0 8px 32px hsla(178, 55%, 20%, .15);
+}
 
+.card__border {
+    width: 124px; 
+    height: 124px;
+    background-color: var(--first-color-light);
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: grid;
+    place-items: center;
+}
+
+.card__perfil {
+    width: 104px;
+    height: 104px;
+    background-color: var(--first-color-lighten) ;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.card__name, .card__profession {
+    color: var(--white-color);
+}
+
+.card__name {
+    font-size: var(--h2-font-size);
+    font-weight: 600;
+    margin-bottom: .25rem;
+}
+
+.card__profession {
+    font-size: var(--smaller-font-size);
+    font-weight: 500;
 }
 
 /* CARD INFO  */
+
 
 /* Card info animation */
