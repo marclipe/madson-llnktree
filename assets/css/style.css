@@ -6,14 +6,15 @@
 :root {
     /* Colors */
     /*Color mode HSL(hue, saturation, lightness)*/
-    --first-color: hsl(175, 55%, 40%);
-    --first-color-light: hsl(175, 30%, 48%);
-    --first-color-lighten: hsl(175, 40%, 62%);
+    --first-color: hsl(224, 89%, 60%);
+    --first-color-light: hsl(224, 64%, 72%);
+    --first-color-lighten: hsl(224, 74%, 84%);
     --gradient-color: linear-gradient(180deg,
-                    hsl(178, 35%, 45%),
-                    hsl(178, 55%, 28%));
-    --title-color: hsl(175, 40%, 16%);
-    --text-color: hsl(175, 8%, 50%);
+                    hsl(224, 35%, 45%),
+                    hsl(224, 55%, 28%));
+
+    --title-color: hsl(224, 40%, 16%);
+    --text-color: hsl(224, 8%, 50%);
     --white-color: #fff;
     --body-color: hsl(175, 100%, 99%);
 
@@ -33,9 +34,18 @@
 }
 
 body {
+    background-color: var(--body-color);
+}
+
+body {
+    background: url('/assets/img/background-two.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
-    background-color: var(--body-color);
+    /* background-color: var(--body-color); */
+   
     color: var(--text-color);
 }
 
@@ -143,6 +153,8 @@ img {
     margin: 0 auto 1rem;
     display: grid;
     place-items: center;
+    transform: translateX(-3rem);
+    transition: transform .8s;
 }
 
 .info__perfil {
@@ -160,6 +172,8 @@ img {
     display: grid;
     row-gap: .25rem;
     margin-bottom: 1.5rem;
+    transform: translateX(-4rem);
+    transition: transform 1s;
 }
 
 .info__name {
@@ -175,6 +189,8 @@ img {
     display: flex;
     justify-content: center;
     column-gap: 1rem;
+    transform: translateX(-5rem);
+    transition: transform 1.2s;
 }
 
 .info__social-link {
@@ -202,3 +218,44 @@ img {
 }
 
 /* Card info animation */
+.info:hover {
+    clip-path: circle(75%);
+}
+
+.info:hover .info__info {
+    opacity: 0;
+}
+
+.info:hover .info__border, 
+.info:hover .info__data, 
+.info:hover .info__social {
+    transform: translateX(0);
+}
+
+/* @media screen and (min-width: 768px) { 
+    .card {
+        width: 490px;
+        border-radius: 2rem 2rem 22rem 22rem;
+        padding: 5rem 3rem 7rem;
+    }
+
+    .info {
+        width: 100%;
+        padding: 5rem 3rem 6.6rem;
+        border-radius: 2rem 2rem 22rem 22rem;
+    }
+
+    .card__border {
+        width: 200px;
+        height: 200px;
+        margin: 1 auto 2rem;
+    }
+
+    .info {
+        width: 100%;
+
+        padding: 5rem 3rem 6.6rem;
+        border-radius: 2rem 2rem 22rem 22rem;
+        clip-path: circle(32px at 500px 80px);
+    }
+} */
